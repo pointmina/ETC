@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new object()로 사용자 객체 만들기</title>
+    <script>
+        function inquiry(){ return this.balance;}
+        function deposit(money){this.balance += money;}
+        function withdraw(money){ this.balance -= money; return money;}
+        
+        let accout = new Object();
+        accout.owner = "김한토";
+        accout.code = '010123456789007';
+        accout.balance = 35000;
+        accout.inquiry = inquiry;
+        accout.deposit = deposit;
+        accout.withdraw = withdraw;
+
+    </script>
+
+</head>
+<body>
+    <h3>사용자 객체 만들기</h3>
+<hr>
+<script>
+    document.write("account : " + accout.owner +", "+ accout.code +", "+ accout.balance+"<br>");
+
+    accout.deposit(10000);
+    document.write("잔액은 " + accout.inquiry() + " 원 입니다.<br>")
+    accout.withdraw(5000);
+    document.write("잔액은 " + accout.inquiry() + " 원 입니다.<br>")
+
+</script>
+    
+</body>
+</html>
