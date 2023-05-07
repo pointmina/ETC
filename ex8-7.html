@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 속성으로 DOM 객체 찾기</title>
+
+    <script>
+        function cute(){
+            let tagArray =
+            document.getElementsByClassName("cute");
+            
+            for(let i=0; i<tagArray.length; i++){
+            let tag = tagArray[i];
+            tag.style.color = "orchid";
+            tag.style.fontSize = "20px";
+            tag.style.textDecoration = "underline"
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    
+    <h3>쿠키</h3><br>
+<button onclick="cute()"> 카와이</button>
+</h3>
+<hr>
+
+<p> 
+    지금 시각은 2023-05-07 오늘은 집에만 있었다. <br>
+    살을 빼려고 했는데 실패한 듯 하다.<br>
+    <span class='cute'>쿠키</span> 산책을 했었어야 했는데 못해줬다.<br>
+    심심한지 나를 계속 불렀다. <br>
+    <span class='cute'>쿠키</span>야 미안해 내일 누나가 집에 와서 산책 꼭 해줄게<br>
+    사랑해 <br>
+
+</p>
+
+</body>
+</html>
