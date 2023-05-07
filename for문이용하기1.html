@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 문을 이용하여 텍스트 출력하기</title>
+</head>
+<body>
+    <h3>for 문으로 10px~35px 크기 출력</h3>
+    <hr>
+    <script>
+        for(let size=10; size<=35; size+=5){
+            document.write("<span style = 'font-size:" + size + "px'>" + size + "px </span>");
+            //앞에 size는 폰트 사이즈 설정해주는거고 뒤에 size는 출력할 숫자    
+        }
+    </script>
+</body>
+</html>

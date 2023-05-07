@@ -41,5 +41,67 @@
     onmouseout="out(this)">
 <!--this는 현재 img 태그를 가르키는 자바스크립트-->
 
+<h3>링크의 href에 자바스크립트 작성</h3>
+<hr>
+<a href="javascript:alert('>w<')">
+    따봉햄찌야 고마워! <br>
+</a>
+<script>
+    document.write('<h3>따봉 쿼카야 고마워!</h3>')
+    document.write('따봉 쿼카야 고마워!')
+</script>
+
+<!--사용자 입력 및 메세지 출력
+    prompt()함수 다이얼로그 출력하고, 사용자로부터 문자열을 입력받아 리턴
+    아무것도 입력하지 않으면 ""를, 취소 버튼이나 강제로 다이얼로그를 닫은 경우는 null값 리턴
+-->
+
+<!-- <script>
+    let ret = prompt("이름을 입력하세요", "이름");
+    if(ret =="") {
+
+    }
+    else {
+
+    }
+</script> -->
+
+<!--confirm함수는 메시지와 확인/취소 버튼을 가진 다이얼로그를 출력한다.
+    사용자가 확인버튼을 누르면 true를 취소버튼이나 다이얼로그를 강제로 닫으면
+    false를 리턴한다.-->
+<!-- 
+<script>
+    let ret = confirm("따봉을 날릴까요?");
+    if (ret == true) {
+
+    }
+    else{
+
+    }
+</script> -->
+<!-- 
+alert함수는 함수의 다이얼로그를 출력하여 단순히 메세지를 전달한다.
+ -->
+
+<script>
+    // alert("따봉!")
+    let oct = 015;
+    let hex= 0x15;
+    let condition = true;
+
+    document.write("8진수 015는 십진수로" + oct + "<br>");
+    document.write("햄찌는 \"따봉!\"라고 했습니다.<br>");
+
+    let x=1, y=2, z=3;
+    x&=3
+    document.write(x)
+
+</script>
+
+
+
+
+
+
 </body>
 </html>
