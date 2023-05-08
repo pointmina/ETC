@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-7</title>
+    <script>
+        function query(){
+            let ret = confirm("따봉을 누르겠습니까?");
+            return ret; //confirm()의 리턴 값은 true or false
+        }
+
+        function noAction(e){
+            e.preventDefault();
+        }
+    </script>
+</head>
+<body>
+    <h3>이벤트의 디폴트 행동 취소</h3>
+    <a href="https://i1.sndcdn.com/artworks-jdpgyzAzT1eDzlAJ-P90ffQ-t500x500.jpg"
+    onclick="return query()">따봉</a>
+    <hr>
+    <form>
+        <input type="checkbox"><span style="font-size: 100px;">👍</span><br>
+        <input type="checkbox"
+        onclick="noAction(event)"><span style="font-size: 100px;">🖕</span><br>
+    </form>
+</body>
+</html>
