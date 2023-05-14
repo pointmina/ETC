@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-8</title>
+</head>
+<body>
+
+<canvas id="myCanvas" style="background-color: black"
+width="500" height="400"></canvas>
+<script>
+    let canvas = document.getElementById("myCanvas");
+    let context = canvas.getContext("2d");
+    context.strokeStyle = "pink";
+
+    for(let i=0; i<4; i++){
+        context.font = (10 + i*10) + "px forte";
+        context.strokeText("My name is Hanto", 10, 30+i*50);
+    }
+
+    context.font = "italic 50px forte";
+    context.strokeStyle = "rgb(255, 46, 115)";
+    context.lineWidth = 5;
+    context.textAlign = "left";
+    context.strokeText("My name is Hanto", 50, 250);
+    
+    context.fillStyle = "rgb(255, 46, 115)";
+    context.textAlign = "right";
+    context.fillText("My name is Hanto", 490, 300);
+
+</script>
+</body>
+</html>
