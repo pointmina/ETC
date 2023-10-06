@@ -79,9 +79,51 @@
    - 해석이 어려워 프로세서 설계가 복잡해짐
    - CISC(Complex Instruction Set Computer)에서 사용 
 
+<<3-주소 명령어 형식>>
+![image](https://github.com/pointmina/computer_structure/assets/68779817/a2ea54d7-5ec4-492b-9ce3-6502dad3088a)
+![image](https://github.com/pointmina/computer_structure/assets/68779817/320d6676-94fb-4e6d-a0d0-3e02405a9824)
+- 명령어의 길이가 길어진다.
+- 프로그램을 구현하는 명령어의 수가 적어진다.
 
+<<2-주소 명령어 형식>>
+![image](https://github.com/pointmina/computer_structure/assets/68779817/f73297bf-d722-4acf-aff4-a855524f55dc)
+![image](https://github.com/pointmina/computer_structure/assets/68779817/443bf324-fe66-4699-9f29-9760ee05fe79)
+- 첫번째 source와 target 피연산자를 동일하게 사용한다.
+- 명령어의 길이가 짧아진다.(3주소에 비해)
+- 프로그램을 구현하는 명령어의 수가 증가한다.
 
+<<1-주소 명령어 형식>>
+![image](https://github.com/pointmina/computer_structure/assets/68779817/7a3d9ead-233a-4183-9bde-d83f45699cc9)
+- 누산기(Acc, Accumulator)를 사용한다.
+- 명령어 표현에서 Acc를 생략하여 명령어의 길이가 매우 짧아진다.
+- 명령어의 수가 가장 많아진다.
+- 초기 컴퓨터에서 사용하였으나, 지금은 찾아보기 힘들다.
 
+<<0-주소 명령어 형식>>
+- 스택을 사용하는 계산기에서 사용하는 명령어 형식
+  - ADD, MUL 등의 연산자는 stack에서 두 개의 데이터를 pop하여 계산하고 그 결과를 push한다.
+![image](https://github.com/pointmina/computer_structure/assets/68779817/5b77694c-0b09-4af0-b880-9fbb4ccc34c6)
+
+<<피연산자와 관련하여 명령어 길이를 줄이는 방법>>
+- 메모리 주소 대신 레지스터 주소 사용 (레지스터는 3비트 메모리 주소는 16비트)
+- 2-주소 명령어 형식 : 3-주소 명령어 형식보다 명령어 길이가 짧아진다.
+- 1-주소 명령어 형식의 묵시적 피연산자(implicit operand) 사용 : 피연산자에서 누진기를 생략함으로써 명령어 길이가 짧아진다.
+
+3. 명령어 사이클
+
+   <<가상컴퓨터 AccCom의 CPU 구성>>
+   - 제어장치
+      - PC(program counter) : 프로그램 계수기 (다음번에 실행해야할 주소를 가지고 있음)
+      - IR(instruction register) : 명령어 레지스터 (명령어를 잠시 보관해줌)
+   - 연산장치
+      - Acc(accumulator) : 누산기
+   - 메모리 인터페이스
+              
+   <<명령어 사이클의 종류>>
+   - 인출 사이클 : 메모리에서 CPU로 명령어를 가져오는 단계 : 실행할 명령어를 메모리 -> CPU 단계
+   - 실행 사이클 : CPU에서 명령어를 실행하는 단계
+   - 인터럽트 사이클 : 인터럽트 발생시 서비스 루틴을 실행하는 단계
+    
 
 
 
