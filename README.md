@@ -93,7 +93,7 @@
 - 데이터베이스 구조를 정의(definition)하고 변경(alter)하는데 사용
 - 데이터 정의의 내용
    - 논리적 데이터 구조의 정의
-      - 스키마, 외부 스키마 명세     논리적 구조 => 외부스키마
+      - 스키마, 외부 스키마 명세     논리적 데이터 구조 => 외부스키마
    - 물리적 데이터 구조의 정의
       - 내부 스키마 명세
       - 데이터 저장 정의어  
@@ -105,9 +105,23 @@
    - What과 **How**를 명세
    - 한번에 하나의 레코드만 처리
    - 응용 프로그램 속에 삽입 되어 사용
-   - 
 
+2) 비절차적(non-procedural) DML :
+   - 고급 데이터 언어
+   - **WHAT** 만 명세하고 how는 시스템에 위임
+   - 한번에 여러 개의 레코드를 처리
   
+<<데이터 제어어 DCL(Data control language)>> : commit, grant, revoke, rollback
+  - 데이터베이스 관리를 위해 데이터 제어를 정의하고 기술한다.
+  - 데이터 제어 내용
+     - 데이터 보안(security)
+     - 데이터 무결성(integrity)
+     - 데이터 회복(recovery)
+     - 병행수행(concurrency)
+  - DB 관리 목적으로 DBA가 사용 
+   
+    ![image](https://github.com/pointmina/database/assets/68779817/3267835a-2c93-42ef-987f-b16e8bb8e714)
+
 
 
 
