@@ -85,8 +85,28 @@
      - 내부스키마
     
        ![image](https://github.com/pointmina/database/assets/68779817/edad4efe-2d0e-480b-87fb-04b974db3938)
+       ![image](https://github.com/pointmina/database/assets/68779817/8f07cf47-bc69-4eb2-be93-885ee646c798)
 
-   
+4. 데이터 언어
+
+<<데이터 정의어 : DDL(Data Definition Language)>> : create, alter, drop, truncate
+- 데이터베이스 구조를 정의(definition)하고 변경(alter)하는데 사용
+- 데이터 정의의 내용
+   - 논리적 데이터 구조의 정의
+      - 스키마, 외부 스키마 명세     논리적 구조 => 외부스키마
+   - 물리적 데이터 구조의 정의
+      - 내부 스키마 명세
+      - 데이터 저장 정의어  
+   ![image](https://github.com/pointmina/database/assets/68779817/a55e0304-907d-49e1-ac63-88bb4f60d2c6)
+
+<<절차적 데이터 조작어 vs 비절차적 데이터 조작어>> : select, insert, update, delete
+1) 절차적(procedural) DML:
+   - 저급 데이터 언어
+   - What과 **How**를 명세
+   - 한번에 하나의 레코드만 처리
+   - 응용 프로그램 속에 삽입 되어 사용
+   - 
+
   
 
 
