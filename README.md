@@ -63,6 +63,7 @@
 ![image](https://github.com/pointmina/database/assets/68779817/037bcf98-8702-4f12-8df7-241c186e02ac)
 
   <<DBMS의 궁극적 목표>> : **데이터독립성(data independency)**
+  
     ⓐ 논리적 데이터 독립성(logical data independency)
       - 응용 프로그램에 영향을 주지 않고 논리적 데이터의 구조 변경이 가능
       - 응용 프로그램의 효율적 개발이 가능
