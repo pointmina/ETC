@@ -105,6 +105,8 @@
    ![image](https://github.com/pointmina/database/assets/68779817/a55e0304-907d-49e1-ac63-88bb4f60d2c6)
 
 <<절차적 데이터 조작어 vs 비절차적 데이터 조작어>> : select, insert, update, delete
+![image](https://github.com/pointmina/database/assets/68779817/21f2afb8-e508-43ee-ac4e-515adda31577)
+
 1) 절차적(procedural) DML:
    - 저급 데이터 언어
    - What과 **How**를 명세
