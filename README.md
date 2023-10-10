@@ -130,7 +130,12 @@
     ![image](https://github.com/pointmina/database/assets/68779817/3267835a-2c93-42ef-987f-b16e8bb8e714)
 
 
-
+<<데이터베이스 관리자 : DBA(Database Administrator)>>
+- DDL과 DCL을 통해 DB를 정의하고 제어하는 사람
+- DB시스템의 관리, 운영에 모든 책임을 지는 사람
+- DB설계와 운영
+- 행정 및 불평 해결
+- 시스템 감지 및 성능 분석
 
 
 
