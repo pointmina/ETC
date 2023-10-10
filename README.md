@@ -62,15 +62,14 @@
 
 ![image](https://github.com/pointmina/database/assets/68779817/037bcf98-8702-4f12-8df7-241c186e02ac)
 
-  <<DBMS의 궁극적 목표>>
-  : **데이터독립성(data independency)**
-    1) 논리적 데이터 독립성(logical data independency)
+  <<DBMS의 궁극적 목표>> : **데이터독립성(data independency)**
+    ⓐ 논리적 데이터 독립성(logical data independency)
       - 응용 프로그램에 영향을 주지 않고 논리적 데이터의 구조 변경이 가능
       - 응용 프로그램의 효율적 개발이 가능
-    2) 물리적 데이터 독립성(physical data independency)
+    ⓑ 물리적 데이터 독립성(physical data independency)
       - 응용 프로그램과 논리적 데이터 구조에 영향을 주지 않고 물리적 데이터 구조의 변경이 가능
       - 저장 장치의 효율적 개발이 가능
-    3) 데이터 독립성 구현 기법
+    ⓒ 데이터 독립성 구현 기법
       - 사상(mapping)
 
 3. 데이터베이스 시스템 : 데이터를 데이터베이스로 저장 관리하여 정보를 생성하는 컴퓨터 중심 시스템
