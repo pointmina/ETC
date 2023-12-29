@@ -59,7 +59,17 @@ EC2 : Elastic Compute Cloud
 <Spot Fleets> : set of Spot Instance + (optional) On-Demand Instances
 - try to meet the target capacity with price constraints
 - Spot Fleets allow us to automatically request Spot Instances with the lowest price
+- 긍까 플릿이 가장 적합한 런치풀을 선택하고 용량이나 원하는 목표에 다다르면 인스턴스 중지
+- lowestPrice: from the pool with the lowest price (cost optimization, short workload)
+- diversified: distributed across all pools (great for availability, long workloads)
+- capacityOptimized: pool with the optimal capacity for the number of instances
+-  priceCapacityOptimized (recommended): pools with highest capacity available, then select 
+the pool with the lowest price (best choice for most workloads)
+- 여러개의 런치풀과 인스턴스 유형을 정의할 수 있다.
 
+- 간단한 스팟 인스턴스 요청은 요구사항(instance유형, AZ)을 정확히 알때
+- 스팟플릿은 충족하는거 모두 선택
+  
 IP
 -
 
@@ -68,6 +78,8 @@ IP
 - 기기가 인터넷 상에서 식별될 수 있다.
 - 전체 웹에서 유일한 것 (ID느낌?)
 - 구글 검색으로 IP 지리적 위치를 쉽게 찾을 수 있다.
+- If your machine is stopped and then started, the public IP can change
+
 
 2) Private IP
 - 기기가 오직 사설 네트워크 안에서만 식별 될 수 있따.
@@ -76,13 +88,51 @@ IP
 - 지정한 범위의 IP만 사설 IP로 사용될 수 있따.
 
 3) Elastic IP
-- 원하는 기간만큼 소유할 수 있고, <u>고정적인 공용 IPv4(Fixed pulbic IP)</u>를 할당하고 싶을 때 사용한다.
+- 원하는 기간만큼 소유할 수 있고, *고정적인 공용 IPv4(Fixed pulbic IP)* 를 할당하고 싶을 때 사용한다.
 - attach it to one instance at a time
-- 이거 사용하는 것보다 그냥 Public IP에 DNS 이름을 할당하는 것이 좋다,
-
-- 
+- 이거 사용하는 것보다 그냥 Public IP에 DNS 이름을 할당하는 것이 좋다.
 
 
+Placement Group
+-
+
+1) Cluster : 클러스터 배치 그룹
+![image](https://github.com/pointmina/AWS_SAA/assets/68779817/8a4757cb-7bf7-473f-b33e-2a536532de6f)
+
+- 동일한 Rack에 배치 => Great Network
+- Rack에 실패 발생하면, 모든 EC2 인스턴스 실패 ㅋㅋ
+- 실패가 전파 될 수 있음
+- Use case : Big Data job that needs to complete fast, Application that needs extremely low latency and high network throughput
+
+2) Spread : 분산배치그룹
+
+![image](https://github.com/pointmina/AWS_SAA/assets/68779817/c5e35edf-ccf1-41e5-b95b-73320d28f6fd)
+
+- 여러 AZ에 걸쳐 있을 수 있고, 동시 실패 위험 감소
+- AZ당 인스턴스 7개로 제한
+- Use case : Application that needs to maximize high availability, Critical Applications where, each instance must be isolated from failure from each other
+
+3) Partition : 분할 배치 그룹
+
+![image](https://github.com/pointmina/AWS_SAA/assets/68779817/5a5c8704-f6ed-4c63-b23b-ae7a91aa8ccc)
+
+- Up to 7 partitions per AZ
+- 여러 파티션은 동일 리전의 여러 가용영역에 걸쳐 있을 수 있다.
+- Up to 100s of EC2 instances
+- 다른 파티션의 Rack과 분리된다.
+- Use cases: Big Data APP (HDFS, HBase, Cassandra, Kafka)
+
+ENI : Elastic Network Interfaces : 탄력적 네트워크 인터페이스
+-
+-  EC2 인스턴스가 네트워크에 액세스 할 수 있게 해준다.
+-  Primary private IPv4, one or more secondary IPv4
+- One Elastic IP (IPv4) per private IPv4
+- One Public IPv4
+- One or more security groups
+- A MAC address
+- EC2 인스턴스와 독립적으로 ENI를 생성하고, 즉시 연결하거나 장애조치를 위해 EC2인스턴스에서 이동시킬 수 있따.
+- AZ에서 바운딩하고, 특정 AZ에서만 사용가능하다.
+- *장애조치를 위해 instance간 ip를 이동시킬수 있다.*
 
 
 
