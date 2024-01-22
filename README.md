@@ -3,8 +3,8 @@
 Dump
 -
 
-Amazon S3 Transfer Acceleration 
--
+<span style="background-color: #f6f8fa">Amazon S3 Transfer Acceleration</span>
+
 클라이언트와 S3 버킷 간의 장거리 파일 전송을 파일을 빠르고 쉽고 안전하게 전송할 수 있다. 가능한한 빨리 집계할때, 운영상의 복잡성 최소화
 
 Amazon Athena
@@ -221,12 +221,21 @@ EFS(Elastic File System)
 다중 AZ
 높은 가용성
 window 지원 x
+자동 확장
 
 AWS Systems Manager Run Command
 -
 run command를 사용하여 관리형 노드의 구성을 원격으로 안전하게 관리할 수 있다. 일반적으로 관리 작업을 자동화하고 대규모로 일회성 구성 변경을 수행할 수 있다.
 
+EventBridge
+-
+AWS에는 다양한 이벤트에 대한 처리를 쉽게 구성하고, 이벤트 처리를 위한 자동화된 경로를 제공한다.
+이벤트를 사용하여 애플리케이션 구성 요소를 서로 연결하는 서버리스 서비스로, 확장 가능한 이벤트 기반 앱을 더 쉽게 구축할 수 있다. 
 
+매일 아침 같은 시간에 이메일 보내기 
+-
+1. Simple email
+2. AWS EventBridge with Lambda
 
 
 
