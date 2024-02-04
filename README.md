@@ -1,5 +1,6 @@
 # AWS_SAA
 ![KakaoTalk_20240202_004433246](https://github.com/pointmina/AWS_SAA/assets/68779817/00d36212-0232-4697-87cd-1ee379483334)
+클리어
 
 **Amazon S3 Transfer Acceleration**   
 클라이언트와 S3 버킷 간의 장거리 파일 전송을 파일을 빠르고 쉽고 안전하게 전송할 수 있다. 가능한한 빨리 집계할때, 운영상의 복잡성 최소화
