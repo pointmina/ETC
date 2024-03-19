@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-8</title>
+</head>
+<body>
+    <h3>1-10까지 더하는 자바스크립 코드를 add1to10.js 파일로 만들고 백그라운드에서 실행시켜라<br>
+        그리고 더한 값을 웹 페이지에 출력하라.
+    </h3>
+
+    <div>1에서 10까지의 합은 <span id="sum"></span></div>
+
+    <script>
+        let addWorker = new Worker("add1to10.js");
+
+        addWorker.onmessage = function(e) {
+            document.getElementById("sum").innerHTML = e.data;
+
+        let sum = 0;
+        for(let i=1; i<=10; i++)
+            sum += i;
+        postMessage(sum);
+        }
+    
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
+
