@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function over(obj) {
+            obj.src="qua.PNG";
+        } 
+        /*obj는 전달 받은 img 태그를 가리킴*/
+
+        function out(obj) {
+            obj.src='ham.PNG';
+        }
+    </script>
+
+
+    <title>Chap6</title>
+</head>
+<body>
+    <!--자바스크립트 언어의 중요한 특징?
+    1. 조각난 소스 코드 형태로 HTML 페이지에 내장된다.
+    2. 컴파일 과정 없이 브라우저 내부의 자바스크립트 처리기(인터프리터)에 의해 바로 실행된다.
+    3. C언어의 구조를 차용하고 단순화시켜 쉽게 배울 수 있다. 
+    
+    자바스크립트의 위치?
+    1. HTML 태그의 이벤트 리스너 속성에 작성
+    <img src="apple.png" alt="img" onclick="this.src='banana.png'">
+    이미지 태그의 원클릭 이벤트 리스너 속성에 자바스크립트 코드를 작성한 사례이다.
+    apple이미지를 banana 이미지로 변환 <- 이 경우는 자바스크립트의 코드가 짧을 때 적합하다.  
+    2. <script></script> 내에 작성
+    3. 자바스크립트 파일에 작성
+    4. url부분에 작성
+-->
+
+<h3>마우스를 올려 보세요</h3>
+<hr>
+<img src="ham.PNG" alt="이미지"
+    onmouseover="over(this)"
+    onmouseout="out(this)">
+<!--this는 현재 img 태그를 가르키는 자바스크립트-->
+
+<h3>링크의 href에 자바스크립트 작성</h3>
+<hr>
+<a href="javascript:alert('>w<')">
+    따봉햄찌야 고마워! <br>
+</a>
+<script>
+    document.write('<h3>따봉 쿼카야 고마워!</h3>')
+    document.write('따봉 쿼카야 고마워!')
+</script>
+
+<!--사용자 입력 및 메세지 출력
+    prompt()함수 다이얼로그 출력하고, 사용자로부터 문자열을 입력받아 리턴
+    아무것도 입력하지 않으면 ""를, 취소 버튼이나 강제로 다이얼로그를 닫은 경우는 null값 리턴
+-->
+
+<!-- <script>
+    let ret = prompt("이름을 입력하세요", "이름");
+    if(ret =="") {
+
+    }
+    else {
+
+    }
+</script> -->
+
+<!--confirm함수는 메시지와 확인/취소 버튼을 가진 다이얼로그를 출력한다.
+    사용자가 확인버튼을 누르면 true를 취소버튼이나 다이얼로그를 강제로 닫으면
+    false를 리턴한다.-->
+<!-- 
+<script>
+    let ret = confirm("따봉을 날릴까요?");
+    if (ret == true) {
+
+    }
+    else{
+
+    }
+</script> -->
+<!-- 
+alert함수는 함수의 다이얼로그를 출력하여 단순히 메세지를 전달한다.
+ -->
+
+<script>
+    // alert("따봉!")
+    let oct = 015;
+    let hex= 0x15;
+    let condition = true;
+
+    document.write("8진수 015는 십진수로" + oct + "<br>");
+    document.write("햄찌는 \"따봉!\"라고 했습니다.<br>");
+
+    let x=1, y=2, z=3;
+    x&=3
+    document.write(x)
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
