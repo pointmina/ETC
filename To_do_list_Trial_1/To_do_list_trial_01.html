@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px #ccc;
+        }
+        
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #3e8e41;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        
+        li {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            box-shadow: 0px 0px 5px #ccc;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>To-Do List</h1>
+	<input type="text" id="taskInput" placeholder="Add a task...">
+	<button id="addTaskButton">Add</button>
+	<ul id="taskList"></ul>
+
+	<script src="script.js">
+        var taskInput = document.getElementById("taskInput");
+        var addTaskButton = document.getElementById("addTaskButton");
+        var taskList = document.getElementById("taskList");
+
+        function addTask() {
+            var taskText = taskInput.value;
+            if (taskText.length === 0) {
+                alert("Please enter a task.");
+                return;
+            }
+
+            var li = document.createElement("li");
+            li.textContent = taskText;
+            taskList.appendChild(li);
+
+            taskInput.value = "";
+        }
+
+        addTaskButton.addEventListener("click", addTask);
+
+
+    </script>
+    
+</body>
+</html>
