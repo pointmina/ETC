@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-10</title>
+</head>
+<body>
+
+    <h3>캔버스에 꽉 차게 이미지 그리기</h3>
+    <hr>
+    <canvas id="qua"
+    style="background-color: aliceblue;"
+    width="930" height="835"></canvas>
+    
+    <script>
+        let canvas = document.getElementById("qua");
+        let context = canvas.getContext("2d");
+
+        let img = new Image();
+        img.onload = function(){
+            context.drawImage(img,0,0,
+            canvas.width, canvas.height);
+        }
+
+        img.src = "qua.png"
+
+    </script>
+</body>
+</html>
