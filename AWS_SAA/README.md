@@ -1,5 +1,6 @@
 # AWS_SAA
-![KakaoTalk_20240202_004433246](https://github.com/pointmina/AWS_SAA/assets/68779817/00d36212-0232-4697-87cd-1ee379483334)
+![image](https://github.com/pointmina/ETC/assets/68779817/a2936ea5-314c-4cd0-891e-da3b24c14491)
+
 클리어
 
 **Amazon S3 Transfer Acceleration**   
